@@ -76,26 +76,15 @@ Config.SaleLocations = {
 
 }
 
-<<<<<<< Updated upstream
--- Max Sell Price
-=======
 -- Recommended Sell Price
->>>>>>> Stashed changes
 Config.Drugs = {
 	['meth_baggie'] = 40,
 	['meth_baggief'] = 40,
 	['cocaine_packaged'] = 35,
 	['cocaine_packaged_f'] = 35,
-<<<<<<< Updated upstream
-	['joint'] = 15,
-	['fentanyl'] = 45,
-	['shrooms'] = 20,
-	['3d'] = 75
-=======
 	['joint'] = 20,
 	['fentanyl'] = 45,
 	['shrooms'] = 25,
 	['3d'] = 75,
 	['xtc_baggie'] = 50
->>>>>>> Stashed changes
 }
