@@ -19,8 +19,10 @@ ESX.RegisterServerCallback('linden_drugsale:checkCops', function(copsOnline, cal
 
 	for i=1, #xPlayers, 1 do
 		local xPlayer = ESX.GetPlayerFromId(xPlayers[i])
-		if xPlayer.job.name == 'police_bcso' or xPlayer.job.name == 'police_lspd' or xPlayer.job.name == 'police_fbi' then
-			copsOnline = copsOnline +1
+		for k, v in pairs(Config.PoliceJobs) do
+			if xPlayer.job.name == v then
+				copsOnline = copsOnline +1
+			end
 		end
 	end
 	callback(copsOnline)

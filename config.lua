@@ -88,3 +88,7 @@ Config.Drugs = {
 	['3d'] = 75,
 	['xtc_baggie'] = 50
 }
+
+Config.PoliceJobs = {
+	'police_bcso','police_fib','police_lspd'
+}
