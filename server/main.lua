@@ -40,3 +40,9 @@ AddEventHandler('linden_drugsale:snitch', function(streetname, postal)
 		}
 	}}, "CALL_911", false)
 end)
+
+lib.callback.register('linden_drugsale:getPrice', function(drugToSell, increaseSalePrice, sellCount)
+local salePrice = ((math.random(Config.MinimumPayment, (Config.Drugs[drugToSell.name]+20)) * increaseSalePrice) * sellCount)
+return salePrice
+
+end)

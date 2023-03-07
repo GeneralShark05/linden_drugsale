@@ -235,7 +235,7 @@ AddEventHandler('linden_drugsale:attemptSale', function(drugCount, playerPed, pe
 			sellCount = math.random(drugToSell.count)
 		end
 
-		salePrice = ((math.random(Config.MinimumPayment, (Config.Drugs[drugToSell.name]+20)) * increaseSalePrice) * sellCount)
+		salePrice = lib.callback('linden_drugsale:getPrice', false, drugToSell, increaseSalePrice, sellCount)
 
 		if numberOfCops == 2 then
 			salePrice = salePrice * 1.1
